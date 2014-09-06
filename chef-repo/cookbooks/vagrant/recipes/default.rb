@@ -14,3 +14,10 @@ end
 service 'httpd' do
   action [:start, :enable]
 end
+
+template '/etc/httpd/conf/httpd.conf' do
+  action :create
+  owner 'root'
+  group 'root'
+  mode 420
+end
