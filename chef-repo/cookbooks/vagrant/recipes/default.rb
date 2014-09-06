@@ -8,3 +8,9 @@
 #
 
 package 'git'
+
+execute 'devtools' do
+  user 'root'
+  command 'yum -y groupinstall "Development Tools"'
+  action :run
+end
