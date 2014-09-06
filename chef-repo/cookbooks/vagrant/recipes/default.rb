@@ -8,6 +8,8 @@
 #
 
 package 'git'
+package 'ImageMagick'
+package 'ImageMagick-devel'
 
 execute 'devtools' do
   user 'root'
