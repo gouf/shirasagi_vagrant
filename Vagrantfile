@@ -13,7 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "chef/centos-6.5"
 
   config.vm.provision :serverspec do |spec|
-    spec.pattern = '*_spec.rb'
+    spec.pattern = ['*_spec.rb', 'spec/default/*_spec.rb']
   end
 
   # Disable automatic box update checking. If you disable this, then
