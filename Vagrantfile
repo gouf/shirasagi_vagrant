@@ -12,10 +12,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "chef/centos-6.5"
 
-  config.vm.provision :serverspec do |spec|
-    spec.pattern = ['*_spec.rb', 'spec/default/*_spec.rb']
-  end
-
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
@@ -100,6 +96,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   # You may also specify custom JSON attributes:
   #   chef.json = { :mysql_password => "foo" }
   # end
+
+  config.vm.provision :serverspec do |spec|
+    spec.pattern = ['*_spec.rb', 'spec/default/*_spec.rb']
+  end
 
   # Enable provisioning with chef server, specifying the chef server URL,
   # and the path to the validation key (relative to this Vagrantfile).
