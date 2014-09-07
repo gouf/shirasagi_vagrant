@@ -11,12 +11,6 @@ package 'git'
 package 'ImageMagick'
 package 'ImageMagick-devel'
 
-execute 'devtools' do
-  user 'root'
-  command 'yum -y groupinstall "Development Tools"'
-  action :run
-end
-
 yum_repository 'epel' do
   baseurl 'http://ftp.jaist.ac.jp/pub/Linux/Fedora/epel/6/x86_64/'
   mirrorlist 'http://mirrors.fedoraproject.org/mirrorlist?repo=epel-6&arch=x86_64'
