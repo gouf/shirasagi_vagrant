@@ -99,6 +99,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     # You may also specify custom JSON attributes:
     # chef.json = { :mysql_password => "foo" }
+    chef.json = {
+      rvm: {
+        user_installs: [
+          user: 'vagrant',
+          default_ruby: '2.1.2',
+          rubies: ['2.1.2'],
+          global_gems: [
+            { :name => 'bundler' }
+          ]
+        ]
+      }
+    }
   end
 
   config.vm.provision :serverspec do |spec|
