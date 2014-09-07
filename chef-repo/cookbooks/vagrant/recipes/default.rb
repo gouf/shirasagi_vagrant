@@ -7,6 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
+include_recipe 'build-essential::default'
+
 package 'git'
 package 'ImageMagick'
 package 'ImageMagick-devel'
