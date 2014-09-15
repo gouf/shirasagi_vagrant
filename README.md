@@ -3,7 +3,7 @@ shirasagi_vagrant
 =================
 
 
-Easy setup [shirasagi](https://github.com/shirasagi/shirasagi) just ```vagrant up```
+Easy setup [Shirasagi](https://github.com/shirasagi/shirasagi) just ```vagrant up```
 
 ## vagrant plugin requirements
 
