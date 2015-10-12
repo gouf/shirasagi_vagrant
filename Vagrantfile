@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "chef/centos-6.5"
+  config.vm.box = "puphpet/centos65-x64"
 
   config.omnibus.chef_version = :latest
   # Disable automatic box update checking. If you disable this, then
